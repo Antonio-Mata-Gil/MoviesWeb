@@ -1,0 +1,40 @@
+<main>
+    <div class="center">
+        <div class="info-not-exist">
+            <div class="title">
+                <h1>Mis Peliculas Creadas</h1>
+            </div>
+            <div class="not-info-container" *ngIf="moviesCreated.length === 0">
+                <p>Aún no has creado ninguna películas</p>
+            </div>
+        </div>
+        
+        <div class="create-film-container " >
+            
+            <div class="info-container" *ngIf="moviesCreated.length > 0">
+                <div *ngFor="let film of moviesCreated" class="img-container-top" >
+                    <img src="{{film.poster_path}}" (click)="onMovieClick(film)">
+                    <div class="container-info" (click)="onMovieClick(film)">
+                        <p class="title-movie">{{ film.title }}</p>
+                        <p class="rating"> <i class="fa-solid fa-star"></i>{{ film.vote_average }}</p>
+                    </div>
+                    <div class="buttons-container">
+                        <button > <a [routerLink]="['../edit-movie', film.id ]">Editar</a></button>
+                   
+                        <button class="button-delete" (click)="onDeleteMovie(film)">Eliminar</button>
+                    </div>
+                 
+        
+                </div>
+            </div>
+        
+        
+        
+        </div>
+        
+        
+        
+        <app-movie-form (onCreateMovie)="onCreateMovie($event)"></app-movie-form>
+    </div>
+</main>
+

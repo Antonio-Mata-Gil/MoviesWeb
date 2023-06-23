@@ -1,0 +1,91 @@
+@import '../../../styles.scss';
+
+.center{
+    width: 85%;
+    margin: auto;
+
+    .info-not-exist{
+        margin-top: 40px;
+        margin-bottom: 50px;
+
+        
+        .not-info-container{
+            border-top: 1px solid $secundary-color;
+            
+        }
+    }
+
+    .create-film-container{
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: flex-start;
+
+        .info-container{
+            display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    
+        }
+    
+        .img-container-top{
+            margin-top: 20px;
+            margin-right:20px ;
+            cursor: pointer;
+    
+            img{
+               width: 253px;
+                height: 380px;
+                border-radius: 15px;
+                box-shadow: 1px 3px 20px -6px black;
+                
+            }
+    
+            .container-info{
+    
+                width: 200px;
+                .title-movie{
+                    font-size: 22px;
+                    margin-bottom: 8px;
+                    
+                }
+                .rating{
+                    font-size: 18px;
+                }
+                .fa-solid {
+                    color:#F0F363;
+                    margin-right: 5px;
+                }
+                
+            }
+            .buttons-container{
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: space-between;
+                button{
+                    background-color: #F0F363;
+                    width: 40%;
+                    padding: 10px 20px 10px 20px;
+                    border-radius: 7px;
+                    border: 0;
+                    font-family: $font;
+                    font-size: 20px;
+                    cursor: pointer;
+                    a{
+                        color: $secundary-color;
+                        text-decoration: none;
+                        
+                    }
+                    
+                   
+                }
+                .button-delete{
+                    background-color: $secundary-color;
+                    color: $primary-color;
+                }
+            }
+            
+            
+        }
+    }
+}

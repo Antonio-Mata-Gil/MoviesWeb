@@ -1,0 +1,95 @@
+
+    <div class="h2-title">
+        <h2>{{ movie ? 'Editar' : 'Crear' }} tu películas</h2>
+    </div>
+   
+    <form
+    (submit)="createMovie()"
+    *ngIf="movieForm"
+        [formGroup]="movieForm">
+        <div>
+            <label>Título</label>
+            <input class="input-style" type="text"  formControlName="title">
+            <p
+            *ngIf="!movieForm.get('title')?.valid
+                && movieForm.get('title')?.dirty "
+            class="error"
+        >El campo es requerido</p>
+        </div>
+        <div>
+            <label>Fecha de estreno</label>
+            <input class="input-style" type="date" formControlName="release_date" >
+            <p
+            *ngIf="!movieForm.get('date')?.valid
+                && movieForm.get('date')?.dirty "
+            class="error"
+        >El campo es requerido</p>
+        </div>
+        <div>
+            <label>Duración/Min</label>
+            <input class="input-style" type="number"  formControlName="runtime">
+            <p
+            *ngIf="!movieForm.get('runtime')?.valid
+                && movieForm.get('runtime')?.dirty "
+            class="error"
+        >El campo es requerido</p>
+        </div>
+        <div>
+            <label>Genero</label>
+            <select
+                
+                class="input-style"
+                formControlName="genres"
+            >
+                <option  *ngFor="let gender of genderForm" [value]="gender.name"> {{gender.name}}</option>
+            </select>
+            <p
+            *ngIf="!movieForm.get('genres')?.valid
+                &&( movieForm.get('genres')?.dirty || movieForm.get('genres')?.touched)"
+            class="error"
+        >El campo es requerido</p>
+        </div>
+        <div>
+            
+            <textarea class="input-style" 
+            placeholder="Sinopsis"
+            formControlName="overview"></textarea>
+            <p
+            *ngIf="!movieForm.get('overview')?.valid
+                && movieForm.get('overview')?.dirty "
+            class="error"
+        >El campo es requerido</p>
+        </div>
+        <div>
+            <label>Imagen</label>
+            <input
+            class="input-style"
+                
+                formControlName="poster_path"
+                
+            >
+            <p
+            *ngIf="!movieForm.get('poster_path')?.valid
+                && movieForm.get('poster_path')?.dirty "
+            class="error"
+        >El campo es requerido</p>
+        </div>
+        <div>
+            <label>Valoración (1 - 10)</label>
+            <input
+            type="number"
+               
+                formControlName="vote_average"
+                class="input-style"
+            >
+            <p
+            *ngIf="!movieForm.get('vote_average')?.valid
+                && movieForm.get('vote_average')?.dirty "
+            class="error"
+        >El campo es requerido y debe ser un número entre 1 y 10</p>
+        </div>
+        <button class="button-style" type="submit">{{ movie ? 'Editar' : 'Crear' }}</button>
+    </form>
+    
+
+

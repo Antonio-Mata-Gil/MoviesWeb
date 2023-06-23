@@ -1,0 +1,22 @@
+@import '../../../../styles.scss';
+
+footer{
+    background-color:$secundary-color;
+    padding: 20px;
+    
+    p{
+        width: 80%;
+        text-align: center;
+        margin: auto;
+        color: white;
+        a{
+            text-decoration: none;
+            color: white;
+            
+        }
+        a:hover{
+            color: cornflowerblue
+        }
+    }
+
+}

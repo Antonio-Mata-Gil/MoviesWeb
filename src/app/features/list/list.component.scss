@@ -1,0 +1,30 @@
+@import '../../../styles.scss';
+.center{
+    margin-bottom: 50px;
+
+    .all-movies-container{
+        display: flex;
+        flex-flow: wrap row;
+        justify-content: center;
+    }
+}
+
+.pagination-container{
+    display: flex;
+    justify-content: flex-end;
+
+    .button-style{
+        padding: 5px 10px 5px 10px;
+        background-color: $primary-color;
+        color: $secundary-color;
+        font-size: 20px;
+        border-radius: 6px;
+        margin-right: 20px;
+        border: 2px solid $secundary-color;
+    }
+    .button-style:hover{
+        background-color: $secundary-color ;
+        color: $primary-color;
+        cursor: pointer;
+    }
+}

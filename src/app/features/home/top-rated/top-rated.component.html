@@ -1,0 +1,12 @@
+<h2>Top Peliculas</h2>
+<div class="top-film-container "
+*ngIf="topMovie" >
+    <div *ngFor="let film of topMovie?.slice(0, 10)"  class="img-container-top" (click)="onMovieClick(film)">
+        <img src= "https://image.tmdb.org/t/p/w500{{film.poster_path}}" >
+        <div class="container-info">
+            <p class="title-movie">{{ film.title }}</p>
+            <p class="rating"> <i class="fa-solid fa-star"></i>{{ film.vote_average }}</p>
+        </div>
+        
+    </div>
+</div>

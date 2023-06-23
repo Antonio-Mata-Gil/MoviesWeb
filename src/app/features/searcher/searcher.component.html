@@ -1,0 +1,16 @@
+<div class="text-title-container">
+    <h1 class="text-title-seacher">Buscar Peliculas: {{ text }}</h1>
+</div>
+<div class="seacher-container " *ngIf=" movies">
+    
+
+    <div *ngFor="let film of movies | filter: text" class="img-container-search" (click)="onMovieClick(film)">
+        <img src="https://image.tmdb.org/t/p/w500{{film.poster_path}}">
+        <div class="container-info">
+            <p class="title-movie">{{ film.title }}</p>
+            <p class="rating"> <i class="fa-solid fa-star"></i>{{ film.vote_average }}</p>
+
+        </div>
+
+    </div>
+</div>

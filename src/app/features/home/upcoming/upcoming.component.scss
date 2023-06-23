@@ -1,0 +1,38 @@
+.upcoming-film-container{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content:flex-start;
+    margin-bottom: 100px;
+
+    .img-container-upcoming{
+        margin-top: 20px;
+        margin-right:20px ;
+        cursor: pointer;
+
+        img{
+           width: 253px;
+            height: 380px;
+            border-radius: 15px;
+            box-shadow: 1px 3px 20px -6px black;
+            
+        }
+
+        .container-info{
+
+            width: 240px;
+            .title-movie{
+                font-size: 22px;
+                margin-bottom: 8px;
+                margin-top: 1px;  
+            }
+            .date-info{
+                margin-bottom: 0%;
+                color: darkgray;
+            }
+           
+           
+            
+        }
+        
+    }
+}

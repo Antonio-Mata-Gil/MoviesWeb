@@ -1,0 +1,25 @@
+<main>
+    <div class="center">
+        <h1> Peliculas</h1>
+        <div class="movies-container">
+            <div class="pagination-container">
+                <button class="button-style" (click)="onPaginationPrevius()"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="button-style" (click)="onPaginationNext()"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+            <div   class="all-movies-container">
+                <app-film 
+                *ngFor="let movie of allMovies "
+                [movie]="movie"
+                class="movies-container"
+                ></app-film>
+            </div>
+            <div class="pagination-container">
+                <button class="button-style" (click)="onPaginationPrevius()"><i class="fa-solid fa-chevron-left"></i></button>
+                <button class="button-style" (click)="onPaginationNext()"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    
+    </div>
+    
+</main>
+

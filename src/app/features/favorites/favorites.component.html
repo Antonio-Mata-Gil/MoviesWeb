@@ -1,0 +1,21 @@
+<main>
+    <div class="center">
+        <h1> Mis Peliculas Vistas</h1>
+        <div class="movies-container " *ngIf=" viewMovie">
+            <div class="img-container-movies" *ngFor="let movie of viewMovie" (click)="onMovieClick(movie)" >
+                <img src="https://image.tmdb.org/t/p/w500{{ movie.poster_path }}">
+                <div class="container-info">
+                  <p class="title-movie">{{ movie.title }}</p>
+                  <p class="rating"><i class="fa-solid fa-star"></i>{{ movie.vote_average }}</p>
+                
+                </div>
+              </div>
+             
+        </div>
+        
+    </div>
+
+</main>
+
+
+

@@ -1,0 +1,46 @@
+<main>
+    <div class="center">
+        <div class="premiere-container" >
+            <div class="slider-premiere-container">
+                <app-movie-premiere
+              
+                [premiereMovies]="movieShow"
+                (screenSizeChange)="onScreenSizeChange($event)"
+                ></app-movie-premiere>
+            </div>
+        </div>
+
+        <div class="popular-text-container">
+            <h1>Popular</h1>
+            <div class="all-movies-container">
+            
+                <app-film 
+                *ngFor="let movie of popularMovies?.slice(0, 10) "
+                [movie]="movie"
+                class="movies-container"
+                ></app-film>
+            </div>
+        </div>
+
+        <div class="popular-container">
+            <div class="popular-movies-container">
+                <app-top-rated
+                [topMovie]="topMovies"
+                ></app-top-rated>
+            </div>
+        </div>
+
+        <div class="popular-container" >
+            <div class="popular-movies-container">
+                <app-upcoming
+                
+                [upcomingMovie]="upcomingMovies"
+                ></app-upcoming>
+            </div>
+        </div>
+        
+    </div>
+</main>
+
+
+

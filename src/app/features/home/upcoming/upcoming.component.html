@@ -1,0 +1,13 @@
+<h3>Proximos Estrenos</h3>
+<div class="upcoming-film-container "
+*ngIf=" filterMovies()" >
+    <div *ngFor="let film of filteredMovies"   class="img-container-upcoming" (click)="onMovieClick(film)">
+        <img src= "https://image.tmdb.org/t/p/w500{{film.poster_path}}" >
+        <div class="container-info">
+            <p class="date-info">{{ film.release_date }}</p>
+            <p class="title-movie">{{ film.title }}</p>
+            
+        </div>
+        
+    </div>
+</div>

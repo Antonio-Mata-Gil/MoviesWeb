@@ -1,0 +1,47 @@
+<main *ngIf="myMovie ">
+
+    <div class="details-container" >
+        <div class="img-poster-container">
+            
+            <img [src]="myMovie.poster_path">
+            
+           
+        </div>
+        <div class="info-container">
+            <div class="info-title" >
+
+                <h1 class="title-detail" >{{ myMovie.title }} </h1>
+                <div class="genres-detail">
+                    <h2  >
+                        {{ myMovie.genres }}
+                    </h2>
+                </div>
+              
+            </div>
+            <div class="info-data">
+                
+                <p> <span class="data-title">Fecha de estreno:</span> <span>{{myMovie.release_date}}</span> </p>
+                <p> <span class="data-title">Duración:</span> <span>{{myMovie.runtime}} min.</span> </p>
+                <p> <span class="data-title">Nota media:</span> <span>{{myMovie.vote_average}}</span> </p>
+
+                
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="synopsis-container" >
+        <div class="title-section">
+            <h3>Sinopsis de película</h3>
+        </div>
+        <div class="container-line"></div>
+        <div class="synopsis">
+            <h4>{{ myMovie.title }}</h4>
+            <p>{{ myMovie.overview }}</p>
+         
+        </div>
+
+    </div>
+   
+   
+</main>

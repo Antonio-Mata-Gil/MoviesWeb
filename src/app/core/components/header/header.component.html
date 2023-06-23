@@ -1,0 +1,23 @@
+<header>
+    <div class="menu-open" (click)="openNavbar()"><i class="fa-solid fa-bars"></i></div>
+    <div class="navbar" [class.visible]="navbarVisible" >
+        <div class="black-rod"></div>
+    
+
+        <nav>
+            
+            <ul>
+                <li><a [routerLink]="['home']">Inicio</a></li>
+                <li><a [routerLink]="['peliculas']">Películas</a></li>
+                <li><a [routerLink]="['mis-peliculas']">Creaciones</a></li>
+                <li><a [routerLink]="['vistas']">Películas Vistas</a></li>
+                
+            </ul>
+            <div class="seacher">
+                <input #search (keyup.enter)="filterValue(search.value) "   class="seacher-input"  placeholder="Buscar" >
+                <button (click)="filterValue(search.value)" type="submit" class="button-searcher"><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            <div class="menu-close" (click)="openNavbar()"><i class="fa-solid fa-xmark"></i></div>
+        </nav>
+    </div>
+</header>

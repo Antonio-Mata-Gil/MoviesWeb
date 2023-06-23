@@ -1,0 +1,24 @@
+<swiper [slidesPerView]="1" [spaceBetween]="0" [navigation]="true" class="swiper-container"
+    *ngIf="premiereMovies && isLargeScreen">
+
+    >
+    <ng-template *ngFor="let films of premiereMovies.slice(0, 10)" swiperSlide>
+        <div class="swiper-img-continer"
+            [ngStyle]="{'background-image': 'url(https://www.themoviedb.org/t/p/original'+ films.backdrop_path +')',}">
+            <div class="container-info">
+                <p class="content-info title">{{ films.title }}</p>
+                <p class="content-info overview">{{films.overview | slice: 0:150}}...</p>
+                <p class="content-info">  <i class="fa-solid fa-star"></i>{{films.vote_average}}</p>
+                <button class="content-info" (click)="onMovieClick(films)">Más Info</button>
+            </div>
+            
+        </div>
+    </ng-template>
+
+</swiper>
+
+<div class="film-container-responsive " *ngIf="premiereMovies && !isLargeScreen">
+    <div *ngFor="let films of premiereMovies" class="img-container-responsive">
+        <img src="https://image.tmdb.org/t/p/w500{{films.poster_path}}">
+    </div>
+</div>

@@ -1,0 +1,38 @@
+.movies-container{
+    display: flex;
+    flex-flow: wrap row;
+    justify-content: flex-start;  
+
+    .img-container-movies{
+        margin-top: 20px;
+        margin-right:20px ;
+        cursor: pointer;
+
+        img{
+           width: 253px;
+            height: 380px;
+            border-radius: 15px;
+            box-shadow: 1px 3px 20px -6px black;
+            
+        }
+
+        .container-info{
+
+            width: 200px;
+            .title-movie{
+                font-size: 22px;
+                margin-bottom: 8px;
+                
+            }
+            .rating{
+                font-size: 18px;
+            }
+            .fa-solid {
+                color:#F0F363;
+                margin-right: 5px;
+            }
+            
+        }
+        
+    }
+}

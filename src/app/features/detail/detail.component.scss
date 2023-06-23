@@ -1,0 +1,138 @@
+@import '../../app.component.scss';
+
+h1 {
+    font-size: 3rem;
+}
+p{
+    font-size: 20px;
+}
+
+main {
+    width: 90%;
+    margin: auto;
+    color: $secundary-color;
+}
+
+.details-container {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 120px;
+
+    .img-poster-container {
+        margin-left: 40px;
+
+        img {
+            width: 400px;
+            border-radius: $border-radius;
+
+        }
+
+        .view-botton-container{
+            text-align: end;
+            
+            margin-top: -66px;
+            
+            button{
+                border-radius: 12px 0px 12px 0px;
+                padding: 20px 30px 20px 30px;
+                background-color: #F0F363;
+                border: 0;
+                cursor: pointer;
+                .fa-sharp{
+                    color: $secundary-color;
+                    font-size: 20px;
+                }
+            }
+        }
+        .not-view-botton-container{
+            text-align: end;
+           
+            margin-top: -66px;
+            
+            button{
+                border-radius: 12px 0px 12px 0px;
+                padding: 20px 30px 20px 30px;
+                background-color: rgb(234, 67, 67);
+                border: 0;
+                cursor: pointer;
+                .fa-sharp{
+                    color: $primary-color;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+    .info-container {
+        width: 50%;
+        margin-left: 10%;
+
+        .info-title {
+
+            .title-detail {
+                margin-bottom: 10px;
+            }
+
+
+            .genres-detail {
+                display: flex;
+                flex-direction: row;
+                margin-top: 1px;
+
+                h2 {
+                    margin-top: 0;
+                    margin-right: 5px;
+                    color: $color-grey;
+                    font-size: 24px;
+                    font-weight: 400;
+                }
+            }
+
+
+        }
+
+        .info-data {
+            .data-title {
+                color: $color-grey;
+                margin-right: 40px;
+            }
+        }
+    }
+}
+
+.synopsis-container {
+    width: 95%;
+    margin: auto;
+    margin-bottom: 100px;
+
+    .title-section {
+       
+
+        h3 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+        
+        
+    }
+    .container-line {
+        background-color: $secundary-color;
+        width: 450px;
+        height: 10px;
+        border-radius: 10px;
+        margin-left: -120px;
+
+    }
+    .synopsis{
+
+        width: 70%;
+        h4{
+            margin-top: 40px;
+            font-size: 1.8rem;
+        }
+        p{
+            color: $color-grey;
+        }
+    }
+}

@@ -1,0 +1,58 @@
+<main *ngIf="movie && creditMovie">
+
+    <div class="details-container" >
+        <div class="img-poster-container">
+            
+            <img [src]="movie.poster_path | poster">
+            <div class="not-view-botton-container" *ngIf="!movie.view">
+                <button (click)="addView()"><i class="fa-sharp fa-solid fa-eye-slash"></i></button>
+            </div>
+            <div class="view-botton-container" *ngIf="movie.view">
+                <button (click)="addView()"><i class="fa-sharp fa-solid fa-eye"></i></button>
+            </div>
+           
+        </div>
+        <div class="info-container">
+            <div class="info-title">
+
+                <h1 class="title-detail">{{ movie.title }} </h1>
+                <div class="genres-detail">
+                    <h2  *ngFor=" let movie of movie.genres">
+                        {{ movie.name }},
+                    </h2>
+                </div>
+              
+            </div>
+            <div class="info-data">
+                
+                <p> <span class="data-title">Fecha de estreno:</span> <span>{{movie.release_date}}</span> </p>
+                <p > <span class="data-title">Pais:</span> <span *ngFor=" let movie of movie.production_countries">{{movie.iso_3166_1}}, </span> </p>
+                <p > <span class="data-title">Productoras:</span> <span *ngFor=" let movie of movie.production_companies">{{movie.name}}, </span></p>
+                <p> <span class="data-title">Duración:</span> <span>{{movie.runtime}} min.</span> </p>
+
+                <div class="credit-info">
+                    <p> <span class="data-title" >Dirección: </span>  <span *ngFor=" let movie of creditMovie.crew"> <span *ngIf="movie.job === 'Director' " >{{movie.name}}, </span></span></p>
+                    <p> <span class="data-title" >Guion: </span>  <span *ngFor=" let movie of creditMovie.crew"> <span *ngIf="movie.job === 'Screenplay' " >{{movie.name}}, </span></span></p>
+                    <p> <span class="data-title" >Música: </span>  <span *ngFor=" let movie of creditMovie.crew"> <span *ngIf="movie.job === 'Original Music Composer' " >{{movie.name}}, </span></span></p>
+                    
+                </div>
+            </div>
+        </div>
+        
+        
+    </div>
+    <div class="synopsis-container" >
+        <div class="title-section">
+            <h3>Sinopsis de película</h3>
+        </div>
+        <div class="container-line"></div>
+        <div class="synopsis">
+            <h4>{{ movie.title }}</h4>
+            <p>{{ movie.overview }}</p>
+         
+        </div>
+
+    </div>
+   
+   
+</main>
