@@ -11,6 +11,7 @@ main {
     width: 90%;
     margin: auto;
     color: $secundary-color;
+    margin: 0%;
 }
 
 .details-container {
@@ -19,19 +20,35 @@ main {
     justify-content: space-between;
     margin-top: 120px;
 
+    @media (max-width: 720px) {
+    
+        flex-direction: column;
+}
+
     .img-poster-container {
         margin-left: 40px;
+
+        @media (max-width: 720px){
+            margin-left: 20px;
+        }
 
         img {
             width: 400px;
             border-radius: $border-radius;
-
+            @media (max-width: 720px) {
+    
+                width: 330px;
+        }
         }
 
+        
         .view-botton-container{
             text-align: end;
             
             margin-top: -66px;
+            @media (max-width: 720px){
+                text-align: start;
+            }
             
             button{
                 border-radius: 12px 0px 12px 0px;
@@ -49,6 +66,10 @@ main {
             text-align: end;
            
             margin-top: -66px;
+            @media (max-width: 720px){
+                text-align: start;
+                margin-top: -65px;
+            }
             
             button{
                 border-radius: 12px 0px 12px 0px;
@@ -67,6 +88,12 @@ main {
     .info-container {
         width: 50%;
         margin-left: 10%;
+        @media (max-width: 720px){
+            width: 100%;
+            margin-left: 20px;
+        }
+
+    
 
         .info-title {
 
@@ -105,6 +132,9 @@ main {
     width: 95%;
     margin: auto;
     margin-bottom: 100px;
+    @media (max-width: 720px){
+        margin-left: 20px;
+    }
 
     .title-section {
        
@@ -127,6 +157,9 @@ main {
     .synopsis{
 
         width: 70%;
+        @media (max-width: 720px){
+            width: 90%;
+        }
         h4{
             margin-top: 40px;
             font-size: 1.8rem;
@@ -136,3 +169,4 @@ main {
         }
     }
 }
+

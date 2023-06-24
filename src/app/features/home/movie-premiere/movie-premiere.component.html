@@ -18,7 +18,7 @@
 </swiper>
 
 <div class="film-container-responsive " *ngIf="premiereMovies && !isLargeScreen">
-    <div *ngFor="let films of premiereMovies" class="img-container-responsive">
+    <div *ngFor="let films of premiereMovies" class="img-container-responsive" (click)="onMovieClick(films)">
         <img src="https://image.tmdb.org/t/p/w500{{films.poster_path}}">
     </div>
 </div>
